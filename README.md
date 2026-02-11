@@ -6,13 +6,13 @@ A comprehensive machine learning web application for predicting wine quality usi
 
 This project implements multiple machine learning classification models to predict wine quality based on physicochemical properties. The goal is to build an interactive web application that demonstrates the complete ML workflow from data exploration to model deployment.
 
-## 📊 Dataset Description **[1 mark]**
+## 📊 Dataset Description 
 
 - **Dataset:** Wine Quality Dataset (Red Wine)
 - **Source:** UCI Machine Learning Repository / [GitHub Repository](https://github.com/2025ab05143/wine-quality/blob/main/winequality-red.csv)
 - **Auto-Download:** The dataset is automatically downloaded from GitHub during app runtime
 - **Instances:** 1,599 red wine samples
-- **Features:** 11 physicochemical properties
+- **Features:** 12 physicochemical properties
 - **Target:** Quality ratings (3-8 scale)
 - **Type:** Multi-class classification problem
 
@@ -32,7 +32,7 @@ The dataset contains sufficient instances (>500) and features (>12 including tar
 - Alcohol
 - **Quality** (target variable)
 
-## 🤖 Models Used **[6 marks - 1 mark for all metrics for each model]**
+## 🤖 Models Used 
 
 ### 1. Logistic Regression
 - Linear classification algorithm
@@ -88,7 +88,7 @@ For each model, the following 6 evaluation metrics are calculated:
 | Random Forest | 0.6781 | 0.7649 | 0.6531 | 0.6781 | 0.6632 | 0.4818 |
 | XGBoost | 0.6531 | 0.7990 | 0.6480 | 0.6531 | 0.6434 | 0.4453 |
 
-## 🔍 Observations on Model Performance **[3 marks]**
+## 🔍 Observations on Model Performance 
 
 | ML Model Name | Observation about model performance |
 |---------------|-----------------------------------|
@@ -99,27 +99,27 @@ For each model, the following 6 evaluation metrics are calculated:
 | **Random Forest** | **Best overall performance** with 67.81% accuracy and strong AUC of 0.7649. Excellent ensemble method that reduces overfitting. Highest MCC of 0.4818 indicates superior balanced classification performance across all quality classes. |
 | **XGBoost** | Strong performance with 65.31% accuracy and **highest AUC** of 0.7990. Advanced gradient boosting handles complex feature interactions well. MCC of 0.4453 shows excellent balanced performance, making it ideal for production deployment. |
 
-## 🚀 Streamlit App Features **[4 marks total]**
+## 🚀 Streamlit App Features 
 
-### a. Dataset Upload Option **[1 mark]**
+### a. Dataset Upload Option 
 - Interactive CSV file upload functionality
 - Automatic data validation and preprocessing
 - Error handling for file format and structure
 - Real-time data preview and statistics
 
-### b. Model Selection Dropdown **[1 mark]**
+### b. Model Selection Dropdown 
 - Dynamic model selection interface
 - Real-time model switching capabilities
 - Comprehensive model comparison tools
 - Interactive model parameter display
 
-### c. Display of Evaluation Metrics **[1 mark]**
+### c. Display of Evaluation Metrics 
 - Interactive metrics dashboard
 - Real-time metric calculations
 - Comparative performance visualization
 - Detailed metric explanations and interpretations
 
-### d. Confusion Matrix and Classification Report **[1 mark]**
+### d. Confusion Matrix and Classification Report 
 - Interactive confusion matrix heatmaps
 - Detailed per-class classification reports
 - Visual performance analysis
@@ -171,19 +171,9 @@ project-folder/
 ├── app.py                       # Main Streamlit application
 ├── requirements.txt             # Python dependencies
 ├── README.md                   # Project documentation (this file)
-├── winequality-red.csv         # Wine quality dataset
-├── get_metrics.py              # Metrics generation script
-├── test_models.py              # Model testing script
+├── wine_quality_merged.csv         # Wine quality dataset
 │
-└── model/                      # ML Models package (*.py files)
-    ├── __init__.py             # Package initialization
-    ├── model_trainer.py        # Model training utilities
-    ├── logistic_regression.py  # Logistic Regression implementation
-    ├── decision_tree.py        # Decision Tree implementation
-    ├── knn.py                  # K-Nearest Neighbors implementation
-    ├── naive_bayes.py          # Naive Bayes implementation
-    ├── random_forest.py        # Random Forest implementation
-    └── xgboost_model.py        # XGBoost implementation
+└── model/                      # ML Models package (*.py and *.pkl files)
 ```
 
 ## 🎯 Application Sections
@@ -250,34 +240,14 @@ Based on comprehensive evaluation:
 - Wine quality prediction benefits from non-linear approaches
 - Class imbalance affects performance on extreme quality ratings
 
-## 🚀 Live Demo
-
-**Streamlit Community Cloud Link:** [Your deployed app URL here]
-
-*The application provides an interactive interface for exploring the wine quality dataset and comparing different machine learning models.*
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is created for educational purposes as part of a Machine Learning assignment.
 
-## 🙏 Acknowledgments
-
-- UCI Machine Learning Repository for the Wine Quality Dataset
-- Streamlit team for the excellent web framework
-- Scikit-learn community for comprehensive ML tools
-- XGBoost developers for advanced boosting algorithms
-
 ---
 
-**Author:** [Your Name]  
+**Author:** [Shyamakanta Chaudhury]  
 **Course:** Machine Learning Classification Assignment  
 **Technology Stack:** Python, Streamlit, Scikit-learn, XGBoost, Plotly  
 **Deployment:** Streamlit Community Cloud
